@@ -1,0 +1,475 @@
+body {
+  font-family: Lato,sans-serif
+}
+
+.App {
+  overflow: hidden;
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.floatLeft{
+  float: left;
+}
+
+.floatRight{
+  float: right;
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.width70{
+  width: 75% !important;
+}
+
+.gradient-lottery{
+  background: linear-gradient(180deg,#0a61b1,#161131 25%);
+}
+
+.sweepers-label {
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(80.26deg,#fff100 30.89%,#ff71ea 75.7%);
+  -webkit-background-clip: text;
+  display: flex;
+  font-size: 27px;
+  font-weight: 900;
+  justify-content: center;
+  margin-top: 3px;
+  text-transform: uppercase;
+}
+
+.sweeprs-label-div{
+  background-image: url('tab-img.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 103px;
+  margin: -14% auto 0;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  width: 207px;
+  z-index: 99;
+}
+
+.sweepers-p{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  margin: 5px 0 0;
+  position: relative;
+  top: 13px;
+}
+
+.prize-border::before {
+  background-image: url('border-line.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  position: absolute;
+  top: 350px;
+  width: 75%;
+  height: 70%;
+}
+
+.price-btn-inner {
+  align-items: center;
+  background: #120d28;
+  border: 1px solid #ffd029;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  font-size: 25px;
+  font-weight: 700;
+  height: 37px;
+  justify-content: center;
+  text-align: center;
+  width: 125px;
+}
+
+.buy_tickets {
+background: linear-gradient(180deg,#ffd600,#ffab00)!important;
+    border: none;
+    border-bottom: 5px solid #dc771a;
+    border-radius: 8px;
+    color: #62370f!important;
+    cursor: pointer;
+    font-size: 27px;
+    font-weight: 900;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+    text-transform: uppercase;
+    width: 222px;
+    margin-top: 25px;
+}
+
+.left-number-btn {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 900;
+  position: absolute;
+  left: 15px;
+  text-decoration: none;
+  width: 20px;
+}
+
+.right-number-btn {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 900;
+  position: absolute;
+  right: 15px;
+  text-decoration: none;
+  width: 20px;
+}
+
+.kitty-number-field {
+  border-radius: 10px;
+  position: relative;
+}
+
+.kitty-number {
+  color: #fff;
+  border: 1px solid #998feb;
+  border-radius: 10px;
+  background: #120d28;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+  height: 37px;
+  text-align: center;
+  width: 125px;
+}
+
+.ticket-p{
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.menu-list {
+  display: block;
+}
+
+.menu{
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  z-index: 1999;
+}
+
+.lucky-winner-span{
+    background-color: #fff;
+    border-radius: 5px;
+    color: #043465;
+    font-size: 22px;
+    margin: 5px;
+    padding: 3px;
+}
+
+.ticket-sold-img {
+  margin-top: 5px;
+  position: relative;
+  z-index: 99;
+}
+
+.max-ticket {
+  color: #86a2ec;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 30px;
+  margin: 0 0 10px;
+  position: relative;
+  top: 15px;
+}
+
+.ticket{
+  margin-top: 120px;
+}
+
+.lucky-winner-left{
+  position: relative;
+  z-index: 99;
+}
+
+@keyframes spin-clock { 
+  from { 
+      transform: rotate(0deg); 
+  } to { 
+      transform: rotate(360deg); 
+  }
+}
+
+.lucky-winner-left::before {
+  -webkit-animation: spin-clock 24s linear infinite;
+  animation: spin-clock 24s linear infinite;
+  background-image: url('bg-rays.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  content: "";
+  position: absolute;
+  top: -10%;
+  z-index: -1;
+  width: 100%;
+  aspect-ratio : 1 / 1;
+}
+
+.ticket-sold-img::before {
+  -webkit-animation: spin-clock 24s linear infinite;
+  animation: spin-clock 24s linear infinite;
+  background-image: url('bg-rays.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  content: "";
+  height: 400px;
+  top: -150px;
+  left: -75px;
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+}
+
+.FAQ {
+  color: #fff;
+  font-family: Lato,sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  position: relative;
+  text-align: center;
+}
+
+.faq-left{
+  border-top: 4px dashed #244e84;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: absolute;
+  vertical-align: middle;
+  width: 15%;
+  top: 75px;
+  left: calc(35% - 80px);
+}
+
+.mt0{
+  margin-top: 40px!important;
+  padding-top: 40px;
+}
+
+.faq-right{
+  border-top: 4px dashed #244e84;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: absolute;
+  vertical-align: middle;
+  width: 15%;
+  top: 75px;
+  left: calc(50% + 80px);
+}
+
+.solanaAvatarArea{
+  background: linear-gradient(180deg,#161131,#5ddf8f 200%);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: relative;
+}
+
+.solana-img{
+  width: 158px;
+  height: 30px;
+}
+
+.solana-img-div {
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+.solana-label {
+  font-family: Orbitron;
+  font-size: 10.65px;
+  color: #50fc42;
+  text-align: right;
+}
+
+.discord-img {
+  margin-top: 20px;
+}
+
+.discord-p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 18px;
+  color: rgb(108, 108, 108);
+}
+
+.connect-wallet {
+  background-color: #04386c !important;
+  height: 50px;
+  border: 2px solid #47deff !important;
+  border-radius: 9px !important;
+  right: 0;
+  margin: 15px;
+  position: absolute;
+}
+
+.height186{
+  height:186px;
+}
+
+.width-menu {
+  width: 75% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-menu {
+  display: none !important;
+}
+
+
+.join_our_community {
+  width: 220px;
+}
+.no-border{
+  border: none;
+}
+
+.connect-wallet-p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.1;
+  width: 100%;
+}
+
+.logo{
+  align-self: center;
+  font-size: 8px !important;
+}
+
+.listitembutton-p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.listing-down{
+  width:435px;
+}
+
+.logo-title-button {
+  font-size: 26px;
+  font-family: Open Sans,sans-serif !important;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: #2f2b47;
+}
+
+@media screen and (max-width: 1475px) {
+  .logo-title-button {
+    font-size: 20px;
+  }
+  .join_our_community{
+    width: 155px !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .connect-wallet {
+    position: relative;
+  }
+  .prize-border::before{
+    visibility: hidden;
+  }
+  .kitty-img{
+    display: none;
+  }
+  .right-number-btn{
+    right: calc(50% - 55px);
+  }
+  .left-number-btn{
+    left: calc(50% - 55px);
+  }
+  .menu-list {
+    display: none !important;
+  }
+  .join_our_community{
+    width: 100px !important;
+  }
+
+
+  .width-menu{
+    width: 85% !important;
+    margin-left: 15%;
+  }
+  .nav-menu {
+    display: block !important;
+  }
+  .listing-down{
+    width:300px !important;
+  }
+  .ticket-sold-img::before {
+    height: 350px;
+    top: -120px;
+    left: -65px;
+    width: 350px;
+  }
+  .logo-title-button {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .ticket-sold-img::before {
+    height: 300px;
+    top: -100px;
+    left: -30px;
+    width: 300px;
+  }
+  .logo-title-button {
+    font-size: 15px;
+    display: none;
+  }
+}
